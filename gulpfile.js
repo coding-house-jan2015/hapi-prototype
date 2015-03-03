@@ -17,7 +17,7 @@ var paths = {
   copydst: './public'
 };
 
-gulp.task('build', ['jade', 'less', 'lint', 'jscs', 'copy']);
+gulp.task('build', ['jade', 'less', 'lint', 'copy']);
 gulp.task('default', ['build', 'watch']);
 
 gulp.task('jade', function() {
@@ -38,15 +38,6 @@ gulp.task('lint', function() {
   gulp.src(paths.codesrc)
     .pipe(lint())
     .pipe(lint.reporter('jshint-stylish'));
-});
-
-gulp.task('jscs', function() {
-  gulp.src(paths.codesrc)
-    .pipe(jscs())
-    .on('error', function (err) {
-      console.log(err.message);
-      this.emit('end');
-    });
 });
 
 gulp.task('copy', function() {

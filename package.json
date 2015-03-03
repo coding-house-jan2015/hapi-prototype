@@ -42,7 +42,6 @@
     "gulp": "^3.8.10",
     "gulp-copy": "0.0.2",
     "gulp-jade": "^0.11.0",
-    "gulp-jscs": "^1.4.0",
     "gulp-jshint": "^1.9.2",
     "gulp-less": "^3.0.0",
     "gulp-watch": "^4.1.1",
